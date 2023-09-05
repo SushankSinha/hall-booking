@@ -1,0 +1,50 @@
+Documentation
+Hall Booking
+A simple Hall Booking App with related APIs.
+
+GET
+Rooms with Booking Data
+http://localhost:8050/rooms-with-bookings
+This API will retrieve all the rooms whose status is "Booked".
+
+GET
+Customer Booking Data
+http://localhost:8050/customers-with-bookings
+This API will retrieve all the customer details who have booked any room.
+
+GET
+Customer Booking History
+http://localhost:8050/customer-booking-history
+This API will retrieve the number of times a customer has booked any sort of room.
+
+POST
+Create Room
+http://localhost:8050/rooms
+This API will help to create a room of desired specs. 
+
+Body
+raw (json)
+json
+{
+    "roomName": "Suite",
+    "roomNumber" : "001",
+    "seatsAvailable": "7",
+    "amenities": ["bathroom", "living area", "dining area"],
+    "pricePerHour": "1100"
+  }
+POST
+Book a room
+http://localhost:8050/bookings
+This API will help to create a booking in the desired room.
+
+Body
+raw (json)
+json
+{
+    "customerName": "Sushank",
+    "date": "06-09-2023",
+    "startTime": "3 AM",
+    "endTime": "11 AM",
+    "roomType": "Suite",
+    "roomNumber": "1"
+}
